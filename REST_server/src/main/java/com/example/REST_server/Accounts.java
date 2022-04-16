@@ -2,7 +2,7 @@ package com.example.REST_server;
 
 
 public class Accounts {
-	private final long uid;
+	private final String uid;
 	private String name;
 	private String address;
 	private String street;
@@ -12,7 +12,7 @@ public class Accounts {
 	private boolean is_active;
 	private String date_created;
 	
-	public Accounts(long uid, String name, String address, String street, int zip, String phone, String picture, boolean is_active, String date_created) {
+	public Accounts(String uid, String name, String address, String street, int zip, String phone, String picture, boolean is_active, String date_created) {
 		this.uid = uid;
 		this.name = name;
 		this.address = address;
@@ -25,7 +25,7 @@ public class Accounts {
 	}
 
 	
-	public long getUid() {
+	public String getUid() {
 		return uid;
 	}
 	public String getName() {
