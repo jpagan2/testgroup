@@ -3,17 +3,17 @@ package com.example.REST_server;
 import java.lang.reflect.Array;
 
 public class Asks {
-	private final long uid;
-	private final long aid;
+	private final String uid;
+	private final String aid;
 	private String type;
 	private String description;
 	private String start_date;
 	private String end_date;
-	private int[] extra_zip;
+	private String[] extra_zip;
 	private boolean is_active;
 	private String date_created;
 	
-	public Asks(long uid, long aid, String type, String description, String start_date, String end_date, int[] extra_zip, boolean is_active, String date_created) {
+	public Asks(String uid, String aid, String type, String description, String start_date, String end_date, String[] extra_zip, boolean is_active, String date_created) {
 		this.uid = uid;
 		this.aid = aid;
 		this.type = type;
@@ -26,10 +26,10 @@ public class Asks {
 	}
 
 	
-	public long getUid() {
+	public String getUid() {
 		return uid;
 	}
-	public long getAid() {
+	public String getAid() {
 		return aid;
 	}
 	public String getType() {
@@ -44,7 +44,7 @@ public class Asks {
 	public String getEnd_date() {
 		return end_date;
 	}
-	public int[] getExtra_zip() {
+	public String[] getExtra_zip() {
 		return extra_zip;
 	}
 	public boolean getIs_active() {

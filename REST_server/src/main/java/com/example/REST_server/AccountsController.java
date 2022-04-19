@@ -18,10 +18,10 @@ public class AccountsController {
     DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("MM-dd-yyyy HH:mm:ss");
     LocalDateTime date_created = LocalDateTime.now();
     String formatted_date = date_created.format(myFormatObj);
-
-	Accounts account0 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", "10",  "West 31st ST", 60616, "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
-	Accounts account1 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", "123",  "2nd ST", 60607, "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
-	Accounts account2 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "01",  "West Main St.", 60616, "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
+    
+	Accounts account0 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Virgil Bistriceanu", "West 31st ST", "60616", "312-567-5146", "http://cs.iit.edu/~virgil/pictures/virgil-head-small-200811.jpg", true, formatted_date);
+	Accounts account1 = new Accounts("<uid" + counter.getAndIncrement() + ">", "Jane Smith", "2nd ST", "60607", "217-456-7890", "http://example.com/images/jane-smith.jpeg", false, formatted_date);
+	Accounts account2 = new Accounts("<uid" + counter.getAndIncrement() + ">", "CSR #1",  "West Main St.", "60616", "(847) 842-8048", "http://example.com/images/jane-smith.jpeg", true, formatted_date);
     	
     
 	@RequestMapping(value = "/bn/api/accounts", method = RequestMethod.GET)
