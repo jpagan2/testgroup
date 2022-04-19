@@ -3,12 +3,14 @@ package com.example.REST_server;
 import java.util.ArrayList;
 import java.util.Dictionary;
 import java.util.Hashtable;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Accounts {
 	private final String uid;
 	private String name;
-	private Dictionary address = new Hashtable();
+	private Map address = new LinkedHashMap(2);
 	private String street;
 	private String zip;
 
@@ -20,8 +22,8 @@ public class Accounts {
 	public Accounts(String uid, String name, String street, String zip, String phone, String picture, boolean is_active, String date_created) {
 		this.uid = uid;
 		this.name = name;
-		this.address.put("zip", zip);
 		this.address.put("street", street);
+		this.address.put("zip", zip);
 
 /*
  		this.street = street;
@@ -41,7 +43,7 @@ public class Accounts {
 	public String getName() {
 		return name;
 	}
-	public Dictionary getAddress() {
+	public Map getAddress() {
 		return address;
 	}
 /*
